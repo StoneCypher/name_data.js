@@ -1,4 +1,12 @@
 
+const mens_first_name_data   = require('./mens_first_names.json'),
+      womens_first_name_data = require('./womens_first_names.json'),
+      last_name_data         = require('./last_names.json');
+
+
+
+
+
 /*
 converted from `Nevermind` 's C# code, [here](http://programmers.stackexchange.com/a/150642/79690).
 
@@ -41,28 +49,21 @@ function random_from(enumerable) {
 
 
 
+module.exports = {
 
+    random_from,
 
-
-
-
-
-export {
-
-    random_from
-
-/*
-	mens_first_name_data,
-	random_mens_first_name,
+    mens_first_name_data,
+//  random_mens_first_name,
 
     womens_first_name_data,
-    random_womens_first_name,
+//  random_womens_first_name,
 
-    random_first_name,
+//  random_first_name,
 
-	last_name_data,
-	random_last_name,
+    last_name_data,
+//  random_last_name,
 
-	random_name
-*/
+//  random_name
+
 };
