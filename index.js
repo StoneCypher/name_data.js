@@ -1,7 +1,11 @@
 
 const mens_first_name_data   = require('./mens_first_names.json'),
       womens_first_name_data = require('./womens_first_names.json'),
-      last_name_data         = require('./last_names.json');
+      last_name_data         = require('./last_names.json'),
+
+      first_name_data        = Object.assign({}, womens_first_name_data);
+
+Object.keys(mens_first_name_data).map(name => first_name_data[name] = (first_name_data[name] || 0) + mens_first_name_data[name]);
 
 
 
@@ -49,6 +53,12 @@ function random_from(enumerable) {
 
 
 
+// const random_mens_first_name
+
+
+
+
+
 module.exports = {
 
     random_from,
@@ -59,6 +69,7 @@ module.exports = {
     womens_first_name_data,
 //  random_womens_first_name,
 
+    first_name_data,
 //  random_first_name,
 
     last_name_data,
