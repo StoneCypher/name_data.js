@@ -53,7 +53,12 @@ function random_from(enumerable) {
 
 
 
-// const random_mens_first_name
+const random_mens_first_name   = () => random_from(mens_first_name_data),
+      random_womens_first_name = () => random_from(womens_first_name_data),
+      random_first_name        = () => random_from(first_name_data),
+      random_last_name         = () => random_from(last_name_data),
+
+      random_name              = () => `${random_first_name()} ${random_last_name()}`;
 
 
 
@@ -64,17 +69,17 @@ module.exports = {
     random_from,
 
     mens_first_name_data,
-//  random_mens_first_name,
+    random_mens_first_name,
 
     womens_first_name_data,
-//  random_womens_first_name,
+    random_womens_first_name,
 
     first_name_data,
-//  random_first_name,
+    random_first_name,
 
     last_name_data,
-//  random_last_name,
+    random_last_name,
 
-//  random_name
+    random_name
 
 };
